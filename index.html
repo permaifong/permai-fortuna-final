@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Permai Polyclinics Fortuna | 24-Hour Clinic in Penampang, Kota Kinabalu</title>
+<meta name="description" content="Permai Polyclinics Fortuna is a 24-hour walk-in clinic at Fortuna Commercial Centre, Mile 2.5 Jalan Penampang, Kota Kinabalu. GP consultations, health screening, vaccinations and chronic disease care.">
+<meta property="og:title" content="Permai Polyclinics Fortuna">
+<meta property="og:description" content="24-hour walk-in clinic at Fortuna Commercial Centre, Jalan Penampang, Kota Kinabalu.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f5f7f6">
+<link rel="icon" type="image/png" href="pictures/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Permai Polyclinics Fortuna",
+  "image": "pictures/logo.png",
+  "telephone": "+6088239393",
+  "email": "permaipolyclinics.fortuna@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ground Floor, Lot 3, Block D2, Lorong Seroja 2, Fortuna Commercial Centre, Mile 2.5, Jalan Penampang",
+    "addressLocality": "Kota Kinabalu",
+    "addressRegion": "Sabah",
+    "postalCode": "88200",
+    "addressCountry": "MY"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "parentOrganization": {
+    "@type": "MedicalOrganization",
+    "name": "Permai Polyclinics Group",
+    "url": "https://www.permaipolyclinics.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer knee pain treatment and knee injection therapy?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Our doctors assess and treat knee pain, and we offer intra-articular knee injection therapy for suitable patients, including those with knee osteoarthritis. Walk in for an assessment, no referral needed."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is an intra-articular (knee) injection?",
+      "acceptedAnswer": {"@type": "Answer", "text": "It is an injection given directly into the knee joint to reduce pain and inflammation and improve movement, commonly used for osteoarthritis. Our doctor will examine your knee first and advise whether the injection is right for you."}
+    },
+    {
+      "@type": "Question",
+      "name": "Are you really open 24 hours?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We are open 24 hours a day, every day of the year, including weekends and public holidays."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an appointment, or can I walk in?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Walk-ins are welcome at any hour, day or night. If you have questions before coming, message us on WhatsApp at 012-939 3537."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer pre-employment health screening?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We provide pre-employment medical examinations and health screening packages, with the report and forms completed for your employer."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you treat children and families?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We see patients of all ages, from babies and children to grandparents, including childhood immunisations and everyday family health care."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide emergency treatment and IV drips?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We handle urgent conditions around the clock and provide IV drip therapy when the doctor finds it necessary. For life-threatening emergencies, please call 999 or head to the nearest hospital emergency department."}
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the clinic located?",
+      "acceptedAnswer": {"@type": "Answer", "text": "We are on the ground floor of Fortuna Commercial Centre, Mile 2.5, Jalan Penampang, 88200 Kota Kinabalu, with parking right outside."}
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    /* Premium soft light theme, Permai brand teal as the single accent */
+    --page:#f5f7f6;
+    --band:#ffffff;
+    --band-deep:#edf1ef;
+    --ink:#17211f;
+    --muted:#5a6663;
+    --hairline:rgba(23,33,31,.14);
+    --accent:#0e7d72;        /* primary CTA + interactive highlights */
+    --accent-deep:#0b6359;   /* CTA hover */
+    --max:1200px;
+    --r-pill:32px;
+    --font:'Manrope',ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--page);
+    color:var(--ink);
+    font-family:var(--font);
+    font-weight:400;
+    font-size:16px;
+    line-height:1.5;
+    letter-spacing:.01em;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    height:68px;
+    background:rgba(245,247,246,.72);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--hairline);
+  }
+  .nav-inner{
+    max-width:var(--max);margin:0 auto;height:100%;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 24px;
+  }
+  .logo-lockup{display:flex;align-items:center;gap:10px}
+  .logo-lockup img{height:38px;width:auto}
+  .logo-text{display:flex;flex-direction:column;justify-content:center}
+  .logo-text .l1{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:19px;font-weight:700;line-height:1;
+    letter-spacing:.05em;text-transform:uppercase;
+    color:#0c8276;
+  }
+  .logo-text .l2{
+    margin-top:4px;
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:10px;line-height:1;
+    letter-spacing:.18em;text-transform:uppercase;
+    color:#55615e;
+  }
+  .logo-text .l2 em{font-style:normal;font-weight:700;color:var(--accent)}
+  .nav-links{display:flex;gap:8px;align-items:center}
+  .nav-links a.link{
+    padding:8px 14px;font-size:14px;color:var(--ink);
+    border-radius:var(--r-pill);transition:background .25s cubic-bezier(.16,1,.3,1);
+  }
+  .nav-links a.link:hover{background:rgba(23,33,31,.06)}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    border-radius:var(--r-pill);
+    font-family:var(--font);font-weight:600;
+    cursor:pointer;border:0;
+    white-space:nowrap;
+    transition:transform .2s cubic-bezier(.16,1,.3,1),background .25s,color .25s;
+  }
+  .btn:active{transform:scale(.98)}
+  .btn-primary{
+    background:var(--accent);color:#ffffff;
+    padding:15px 28px;font-size:16px;
+  }
+  .btn-primary:hover{background:var(--accent-deep)}
+  .btn-ghost{
+    background:rgba(15,23,21,.38);color:#ffffff;
+    padding:15px 28px;font-size:16px;
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+  }
+  .btn-ghost:hover{background:rgba(15,23,21,.52)}
+  .btn-nav{padding:9px 20px;font-size:14px;border-radius:40px}
+  .btn svg{flex:none}
+
+  /* ---------- Hero ---------- */
+  header.hero{
+    position:relative;
+    min-height:100dvh;
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+  }
+  .hero .hero-img,.hero video{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;
+  }
+  .hero .hero-img{
+    transform-origin:50% 40%;
+    animation:kenburns 28s ease-in-out infinite alternate;
+  }
+  .hero.video-live .hero-img{animation-play-state:paused}
+  .hero video{opacity:0;transition:opacity .8s ease}
+  .hero.video-live video{opacity:1}
+  @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08)}}
+  .hero .scrim{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(to bottom, rgba(15,23,21,.6) 0%, rgba(15,23,21,.48) 55%, rgba(15,23,21,.18) 82%, var(--page) 100%);
+  }
+  .hero-content{
+    position:relative;z-index:2;text-align:center;
+    padding:96px 24px 64px;max-width:1060px;
+    color:#ffffff;
+    text-shadow:0 1px 28px rgba(15,23,21,.5);
+  }
+  .hero h1{
+    font-size:clamp(40px,6.2vw,78px);
+    font-weight:300;
+    line-height:1.08;
+    letter-spacing:.01em;
+  }
+  .hero p{
+    margin:26px auto 0;
+    font-size:clamp(16px,2.2vw,21px);
+    font-weight:400;
+    max-width:34em;
+  }
+  .hero-ctas{margin-top:40px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* ---------- Sections ---------- */
+  section{padding:112px 0}
+  h2{
+    font-size:clamp(30px,4vw,49px);
+    font-weight:300;line-height:1.15;letter-spacing:.01em;
+  }
+  .section-sub{
+    margin-top:16px;color:var(--muted);font-size:18px;max-width:38em;
+  }
+
+  /* ---------- Stats band ---------- */
+  .stats{
+    background:var(--band);
+    border-top:1px solid var(--hairline);
+    border-bottom:1px solid var(--hairline);
+    padding:72px 0;
+  }
+  .stats-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:32px;
+  }
+  .stat .num{
+    font-size:clamp(34px,4vw,49px);font-weight:300;line-height:1.15;
+  }
+  .stat .lbl{margin-top:8px;font-size:14px;color:var(--muted);letter-spacing:.28px}
+
+  /* ---------- Services ---------- */
+  .svc-grid{
+    margin-top:56px;
+    display:grid;grid-template-columns:1fr 1fr;
+    column-gap:72px;
+  }
+  .svc{
+    padding:28px 0;
+    border-bottom:1px solid var(--hairline);
+  }
+  .svc h3{
+    font-size:24px;font-weight:400;line-height:1.25;
+    transition:color .25s;
+  }
+  .svc p{margin-top:8px;color:var(--muted);font-size:15px}
+  .svc:hover h3{color:var(--accent)}
+
+  /* ---------- Visit ---------- */
+  .visit-grid{
+    margin-top:56px;
+    display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start;
+  }
+  .visit-item{padding:20px 0;border-bottom:1px solid var(--hairline)}
+  .visit-item:first-child{padding-top:0}
+  .visit-item .k{font-size:12px;letter-spacing:.24px;color:var(--muted);text-transform:uppercase}
+  .visit-item .v{margin-top:6px;font-size:17px;line-height:1.45}
+  .visit-item .v a:hover{color:var(--accent)}
+  .map-shell{
+    border-radius:4px;overflow:hidden;
+    border:1px solid var(--hairline);
+    background:var(--band);
+  }
+  .map-shell iframe{
+    display:block;width:100%;height:480px;border:0;
+    filter:saturate(.85);
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:780px}
+  .faq details{border-bottom:1px solid var(--hairline)}
+  .faq summary{
+    list-style:none;cursor:pointer;
+    padding:26px 0;
+    display:flex;justify-content:space-between;align-items:center;gap:24px;
+    font-size:20px;font-weight:400;
+    transition:color .25s;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:hover{color:var(--accent)}
+  .faq summary .ind{
+    flex:none;width:28px;height:28px;border-radius:50%;
+    background:var(--band-deep);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:300;font-size:18px;color:var(--muted);
+    transition:transform .3s cubic-bezier(.16,1,.3,1);
+  }
+  .faq details[open] summary .ind{transform:rotate(45deg)}
+  .faq .ans{padding:0 48px 26px 0;color:var(--muted);font-size:16px}
+
+  /* ---------- Closing CTA ---------- */
+  .closing{
+    background:var(--band);
+    border-top:1px solid var(--hairline);
+    text-align:center;
+  }
+  .closing h2{max-width:16em;margin:0 auto}
+  .closing p{margin:20px auto 0;color:var(--muted);font-size:18px;max-width:32em}
+  .closing .btn{margin-top:36px}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--band-deep);
+    border-top:1px solid var(--hairline);
+    padding:56px 0 40px;
+  }
+  .foot-brand .logo-lockup img{height:36px}
+  .foot-brand p{margin-top:14px;color:var(--muted);font-size:14px;max-width:26em}
+  .foot-grid{
+    display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;
+  }
+  .foot-col p,.foot-col a{display:block;color:var(--muted);font-size:14px;margin-top:8px}
+  .foot-col a:hover{color:var(--ink)}
+  .foot-col .h{color:var(--ink);font-size:14px;font-weight:600;margin-bottom:6px}
+  .foot-base{
+    margin-top:48px;padding-top:24px;
+    border-top:1px solid var(--hairline);
+    color:var(--muted);font-size:12px;letter-spacing:.24px;
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .foot-base a:hover{color:var(--ink)}
+
+  /* ---------- Reveal motion ---------- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .hero-content>*{opacity:0;transform:translateY(18px);animation:rise .9s cubic-bezier(.16,1,.3,1) forwards}
+  .hero-content p{animation-delay:.12s}
+  .hero-content .hero-ctas{animation-delay:.24s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal,.hero-content>*{opacity:1;transform:none;animation:none;transition:none}
+    .hero .hero-img{animation:none}
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width:900px){
+    .stats-grid{grid-template-columns:1fr 1fr;gap:40px 24px}
+    .svc-grid{grid-template-columns:1fr;column-gap:0}
+    .visit-grid{grid-template-columns:1fr;gap:40px}
+    .map-shell iframe{height:360px}
+  }
+  @media (max-width:760px){
+    .nav-links a.link{display:none}
+    section{padding:80px 0}
+    .stats{padding:56px 0}
+    .faq .ans{padding-right:0}
+    nav .logo-lockup img{height:30px}
+    nav .logo-lockup{gap:8px}
+    nav .logo-text .l1{font-size:15px}
+    nav .logo-text .l2{font-size:8px;letter-spacing:.14em}
+    .btn-nav{padding:8px 16px;font-size:13px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo-lockup" href="#top" aria-label="Permai Polyclinics Fortuna home">
+      <img src="pictures/logo_glyph.png" alt="">
+      <span class="logo-text">
+        <span class="l1">Permai</span>
+        <span class="l2">Polyclinics <em>Fortuna</em></span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#faq">FAQ</a>
+      <a class="link" href="#visit">Visit Us</a>
+      <a class="btn btn-primary btn-nav" href="https://wa.me/60129393537" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img class="hero-img" src="assets/img/hero_poster.jpg" alt="" fetchpriority="high">
+  <video muted loop playsinline preload="none" aria-hidden="true"></video>
+  <div class="scrim"></div>
+  <div class="hero-content">
+    <h1>Rooted in care,<br>growing with generations.</h1>
+    <p>Permai Polyclinics Fortuna, your neighbourhood clinic. Walk in anytime, we're open 24 hours a day.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://wa.me/60129393537" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7.2 3.9Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5L9.7 7.5c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7a9.6 9.6 0 0 0 3.7 3.3c.5.2.9.4 1.2.5.5.2 1 .1 1.4.1.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>
+        WhatsApp Us
+      </a>
+      <a class="btn btn-ghost" href="#visit">Get Directions</a>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap stats-grid reveal">
+    <div class="stat"><div class="num">24 hrs</div><div class="lbl">Open daily, including weekends and public holidays</div></div>
+    <div class="stat"><div class="num">41</div><div class="lbl">Branches across Sabah and beyond in the Permai group</div></div>
+    <div class="stat"><div class="num">70+</div><div class="lbl">Doctors serving patients across the group</div></div>
+    <div class="stat"><div class="num">500+</div><div class="lbl">Healthcare staff supporting your care</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Care for the whole family,<br>under one roof.</h2>
+      <p class="section-sub">From everyday illnesses to long-term condition management, our doctors are ready when you need them.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <h3>GP Consultations</h3>
+        <p>Walk-in doctor consultations and check-ups for adults, children and the elderly.</p>
+      </div>
+      <div class="svc reveal">
+        <h3>Common Illness Treatment</h3>
+        <p>Diagnosis and treatment for colds, flu, fever, infections and minor injuries.</p>
+      </div>
+      <div class="svc reveal">
+        <h3>Health Screening</h3>
+        <p>Routine check-up packages with physical examinations, blood pressure checks and lab tests.</p>
+      </div>
+      <div class="svc reveal">
+        <h3>Vaccinations &amp; Immunisations</h3>
+        <p>Childhood immunisations, flu shots, travel vaccines and adult boosters for all ages.</p>
+      </div>
+      <div class="svc reveal">
+        <h3>Chronic Disease Management</h3>
+        <p>Ongoing care for diabetes, hypertension, asthma and heart conditions, with regular follow-ups.</p>
+      </div>
+      <div class="svc reveal">
+        <h3>Minor Surgical Procedures</h3>
+        <p>Wound care, suturing, incision and drainage, and other minor procedures done on site.</p>
+      </div>
+      <div class="svc reveal">
+        <h3>Medical Certificates &amp; Reports</h3>
+        <p>MCs, medical examinations and reports for work, school or insurance purposes.</p>
+      </div>
+      <div class="svc reveal">
+        <h3>Preventive Care Advice</h3>
+        <p>Practical lifestyle and preventive guidance to keep you and your family healthy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="reveal">Good to know.</h2>
+    <div class="faq reveal" style="margin-top:40px">
+      <details>
+        <summary>Do you offer knee pain treatment and knee injection therapy?<span class="ind">+</span></summary>
+        <div class="ans">Yes. Our doctors assess and treat knee pain, and we offer intra-articular knee injection therapy for suitable patients, including those with knee osteoarthritis. Walk in for an assessment, no referral needed.</div>
+      </details>
+      <details>
+        <summary>What is an intra-articular (knee) injection?<span class="ind">+</span></summary>
+        <div class="ans">It is an injection given directly into the knee joint to reduce pain and inflammation and improve movement, commonly used for osteoarthritis. Our doctor will examine your knee first and advise whether the injection is right for you.</div>
+      </details>
+      <details>
+        <summary>Are you really open 24 hours?<span class="ind">+</span></summary>
+        <div class="ans">Yes. We are open 24 hours a day, every day of the year, including weekends and public holidays.</div>
+      </details>
+      <details>
+        <summary>Do I need an appointment, or can I walk in?<span class="ind">+</span></summary>
+        <div class="ans">Walk-ins are welcome at any hour, day or night. If you have questions before coming, message us on WhatsApp at 012-939 3537.</div>
+      </details>
+      <details>
+        <summary>Do you offer pre-employment health screening?<span class="ind">+</span></summary>
+        <div class="ans">Yes. We provide pre-employment medical examinations and health screening packages, with the report and forms completed for your employer.</div>
+      </details>
+      <details>
+        <summary>Do you treat children and families?<span class="ind">+</span></summary>
+        <div class="ans">Yes. We see patients of all ages, from babies and children to grandparents, including childhood immunisations and everyday family health care.</div>
+      </details>
+      <details>
+        <summary>Do you provide emergency treatment and IV drips?<span class="ind">+</span></summary>
+        <div class="ans">Yes. We handle urgent conditions around the clock and provide IV drip therapy when the doctor finds it necessary. For life-threatening emergencies, please call 999 or head to the nearest hospital emergency department.</div>
+      </details>
+      <details>
+        <summary>Where is the clinic located?<span class="ind">+</span></summary>
+        <div class="ans">We are on the ground floor of Fortuna Commercial Centre, Mile 2.5, Jalan Penampang, Kota Kinabalu, with parking right outside. See the map below for directions.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Find us in Fortuna.</h2>
+      <p class="section-sub">Ground floor of Fortuna Commercial Centre at Mile 2.5, Jalan Penampang. Parking is available right outside.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="reveal">
+        <div class="visit-item">
+          <div class="k">Address</div>
+          <div class="v">Ground Floor, Lot 3, Block D2, Lorong Seroja 2, Fortuna Commercial Centre, Mile 2.5, Jalan Penampang, 88200 Kota Kinabalu, Sabah</div>
+        </div>
+        <div class="visit-item">
+          <div class="k">Opening Hours</div>
+          <div class="v">Open 24 hours, every day of the year</div>
+        </div>
+        <div class="visit-item">
+          <div class="k">Phone</div>
+          <div class="v"><a href="tel:+6088239393">088-239 393</a></div>
+        </div>
+        <div class="visit-item">
+          <div class="k">WhatsApp</div>
+          <div class="v"><a href="https://wa.me/60129393537" target="_blank" rel="noopener">012-939 3537</a></div>
+        </div>
+        <div class="visit-item">
+          <div class="k">Email</div>
+          <div class="v"><a href="mailto:permaipolyclinics.fortuna@gmail.com">permaipolyclinics.fortuna@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="map-shell reveal">
+        <iframe
+          title="Map showing Permai Polyclinics Fortuna at Fortuna Commercial Centre, Jalan Penampang, Kota Kinabalu"
+          src="https://maps.google.com/maps?q=Permai%20Polyclinics%20Fortuna%2C%20Fortuna%20Commercial%20Centre%2C%20Jalan%20Penampang%2C%20Kota%20Kinabalu&z=16&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap reveal">
+    <h2>Feeling unwell? Just walk in.</h2>
+    <p>No appointment needed. Our doctors are here for you round the clock, every single day.</p>
+    <a class="btn btn-primary" href="https://wa.me/60129393537" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7.2 3.9Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5L9.7 7.5c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7a9.6 9.6 0 0 0 3.7 3.3c.5.2.9.4 1.2.5.5.2 1 .1 1.4.1.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>
+      WhatsApp Us
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo-lockup">
+          <img src="pictures/logo_glyph.png" alt="">
+          <span class="logo-text">
+            <span class="l1">Permai</span>
+            <span class="l2">Polyclinics <em>Fortuna</em></span>
+          </span>
+        </div>
+        <p>Permai Polyclinics Fortuna is part of the Permai Polyclinics Group, a trusted healthcare network serving Sabah with 41 branches.</p>
+      </div>
+      <div class="foot-col">
+        <div class="h">Contact</div>
+        <a href="tel:+6088239393">088-239 393</a>
+        <a href="https://wa.me/60129393537" target="_blank" rel="noopener">WhatsApp: 012-939 3537</a>
+        <a href="mailto:permaipolyclinics.fortuna@gmail.com">permaipolyclinics.fortuna@gmail.com</a>
+      </div>
+      <div class="foot-col">
+        <div class="h">Visit</div>
+        <p>Ground Floor, Lot 3, Block D2,<br>Lorong Seroja 2, Fortuna Commercial Centre,<br>Mile 2.5, Jalan Penampang,<br>88200 Kota Kinabalu, Sabah</p>
+      </div>
+      <div class="foot-col">
+        <div class="h">Hours</div>
+        <p>Open 24 hours daily,<br>including weekends and<br>public holidays</p>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 Permai Polyclinics Fortuna. All rights reserved.</span>
+      <a href="https://www.permaipolyclinics.com/" target="_blank" rel="noopener">Permai Polyclinics Group</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Hero video: lazy enhancement layer. The poster image is the LCP element and stays visible underneath. */
+  (function(){
+    var hero = document.querySelector('.hero');
+    var video = hero && hero.querySelector('video');
+    if (!hero || !video) return;
+
+    function drop(){ hero.classList.remove('video-live'); video.remove(); }
+
+    window.addEventListener('load', function(){
+      var conn = navigator.connection;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return drop();
+      if (conn && (conn.effectiveType !== '4g' || conn.saveData === true)) return drop();
+      if (window.innerWidth < 768) return drop();
+
+      var srcs = [
+        ['assets/video/tree_hero_trimmed.webm', 'video/webm'],
+        ['assets/video/tree_hero_trimmed.mp4', 'video/mp4']
+      ];
+      var last;
+      srcs.forEach(function(s){
+        last = document.createElement('source');
+        last.src = s[0]; last.type = s[1];
+        video.appendChild(last);
+      });
+      last.addEventListener('error', drop); /* error on the final source = nothing playable */
+      video.addEventListener('canplaythrough', start, {once:true});
+      video.load();
+    });
+
+    function start(){
+      var p = video.play();
+      if (p && p.then) { p.then(live).catch(drop); } else { live(); }
+    }
+
+    function live(){
+      hero.classList.add('video-live');
+      /* restart just before the final frame; skips the stall the native loop causes */
+      video.addEventListener('timeupdate', function(){
+        if (video.duration && video.currentTime > video.duration - 0.28) video.currentTime = 0.01;
+      });
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting) { video.play().catch(function(){}); }
+            else { video.pause(); }
+          });
+        }, {threshold: 0}).observe(hero);
+      }
+    }
+  })();
+
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      els.forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.2, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
