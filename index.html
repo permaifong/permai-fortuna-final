@@ -626,10 +626,7 @@
 
     function live(){
       hero.classList.add('video-live');
-      /* restart just before the final frame; skips the stall the native loop causes */
-      video.addEventListener('timeupdate', function(){
-        if (video.duration && video.currentTime > video.duration - 0.28) video.currentTime = 0.01;
-      });
+      /* the video file itself is a crossfaded seamless loop; native loop attr handles it */
       if ('IntersectionObserver' in window) {
         new IntersectionObserver(function(entries){
           entries.forEach(function(e){
