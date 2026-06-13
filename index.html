@@ -183,12 +183,17 @@
   .btn svg{flex:none}
 
   /* ---------- Hero ---------- */
+  /* Pinned curtain: the hero stays fixed at the top while main/footer
+     (z-index above) slide over it — it recedes instead of scrolling away */
   header.hero{
-    position:relative;
+    position:sticky;top:0;
     min-height:100dvh;
     display:flex;align-items:center;justify-content:center;
     overflow:hidden;
   }
+  main,footer{position:relative;z-index:3}
+  main{background:var(--page)}
+  .hero-media{position:absolute;inset:0;will-change:transform}
   .hero .hero-img,.hero video{
     position:absolute;inset:0;width:100%;height:100%;
     object-fit:cover;
@@ -211,6 +216,8 @@
     padding:96px 24px 64px;max-width:1060px;
     color:#ffffff;
     text-shadow:0 1px 28px rgba(15,23,21,.5);
+    transform:translateY(var(--hero-drift,0px));
+    will-change:transform,opacity;
   }
   .hero h1{
     font-size:clamp(40px,6.2vw,78px);
@@ -396,8 +403,10 @@
 </nav>
 
 <header class="hero" id="top">
-  <img class="hero-img" src="assets/img/hero_poster.jpg?v=3" alt="" fetchpriority="high">
-  <video muted loop playsinline preload="none" aria-hidden="true"></video>
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" src="assets/img/hero_poster.jpg?v=3" alt="" fetchpriority="high">
+    <video muted loop playsinline preload="none" aria-hidden="true"></video>
+  </div>
   <div class="scrim"></div>
   <div class="hero-content">
     <h1>Rooted in care,<br>growing with generations.</h1>
@@ -411,6 +420,8 @@
     </div>
   </div>
 </header>
+
+<main>
 
 <div class="stats">
   <div class="wrap stats-grid reveal">
@@ -554,6 +565,8 @@
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -626,16 +639,50 @@
 
     function live(){
       hero.classList.add('video-live');
-      /* the video file itself is a crossfaded seamless loop; native loop attr handles it */
-      if ('IntersectionObserver' in window) {
-        new IntersectionObserver(function(entries){
-          entries.forEach(function(e){
-            if (e.isIntersecting) { video.play().catch(function(){}); }
-            else { video.pause(); }
-          });
-        }, {threshold: 0}).observe(hero);
-      }
+      /* the video file itself is a crossfaded seamless loop; native loop attr handles it.
+         play/pause is owned by the scroll ticker below — the hero is sticky, so it never
+         stops intersecting and an IntersectionObserver would never fire */
     }
+  })();
+
+  /* Scroll-linked hero: parallax drift + zoom on the media, counter-drift + fade on the
+     content, video pause once the page has slid over it. Single rAF ticker; work only
+     runs when scrollY actually changes. */
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var hero = document.querySelector('.hero');
+    var media = document.querySelector('.hero-media');
+    var content = document.querySelector('.hero-content');
+    var video = hero && hero.querySelector('video');
+    if (!hero || !media || !content) return;
+    var lastY = -1;
+
+    function syncVideo(y){
+      if (!video || !video.isConnected || !hero.classList.contains('video-live')) return;
+      var covered = y > window.innerHeight + 60;
+      if (covered && !video.paused) video.pause();
+      else if (!covered && video.paused) video.play().catch(function(){});
+    }
+
+    function update(y){
+      if (reduce) return;
+      var p = Math.min(1, y / window.innerHeight);
+      media.style.transform = 'translateY(' + (y * -0.3) + 'px) scale(' + (1 + p * 0.1) + ')';
+      content.style.setProperty('--hero-drift', (y * -0.22) + 'px');
+      var op = Math.max(0, 1 - p * 1.6);
+      content.style.opacity = op;
+      content.style.pointerEvents = op <= 0 ? 'none' : '';
+    }
+
+    function step(){
+      var y = window.scrollY;
+      syncVideo(y);
+      if (y !== lastY) { lastY = y; update(y); }
+    }
+
+    window.addEventListener('scroll', step, {passive:true});
+    window.addEventListener('resize', function(){ lastY = -1; step(); }, {passive:true});
+    (function tick(){ requestAnimationFrame(tick); step(); })();
   })();
 
   (function(){
