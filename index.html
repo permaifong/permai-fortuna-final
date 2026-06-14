@@ -261,6 +261,28 @@
   .stat .lbl{margin-top:8px;font-size:14px;color:var(--muted);letter-spacing:.28px}
 
   /* ---------- Services ---------- */
+  #services{position:relative;overflow:hidden}
+  #services .wrap{position:relative;z-index:3}
+  /* nurses cutout floated to the right, teal-duotone, behind the content */
+  .svc-photo{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:url(pictures/nurses_cutout.png?v=1);
+    background-repeat:no-repeat;
+    background-position:right -24px bottom 0;
+    background-size:auto 98%;
+    filter:grayscale(1) contrast(1.05);
+    opacity:.6;
+  }
+  /* teal painted only on the figures, via the cutout used as a mask */
+  .svc-photo-tint{
+    position:absolute;inset:0;z-index:1;pointer-events:none;background:var(--accent);opacity:.4;
+    -webkit-mask:url(pictures/nurses_cutout.png?v=1) right -24px bottom 0 / auto 98% no-repeat;
+    mask:url(pictures/nurses_cutout.png?v=1) right -24px bottom 0 / auto 98% no-repeat;
+  }
+  .svc-scrim{
+    position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:linear-gradient(100deg, var(--page) 32%, rgba(245,247,246,.4) 64%, transparent 100%);
+  }
   .svc-grid{
     position:relative;
     margin-top:56px;
@@ -458,6 +480,8 @@
   @media (max-width:900px){
     .stats-grid{grid-template-columns:1fr 1fr;gap:40px 24px}
     .svc-grid{grid-template-columns:1fr;column-gap:0}
+    .svc-photo{background-size:auto 60%;opacity:.3}
+    .svc-photo-tint{opacity:.26;-webkit-mask-size:auto 60%;mask-size:auto 60%}
     .visit-grid{grid-template-columns:1fr;gap:40px}
     .map-shell iframe{height:360px}
     .review-grid{grid-template-columns:1fr;gap:18px}
@@ -526,6 +550,9 @@
 </div>
 
 <section id="services">
+  <div class="svc-photo" aria-hidden="true"></div>
+  <div class="svc-photo-tint" aria-hidden="true"></div>
+  <div class="svc-scrim" aria-hidden="true"></div>
   <div class="wrap">
     <div class="reveal">
       <h2>Care for the whole family,<br>under one roof.</h2>
