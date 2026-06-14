@@ -32,11 +32,15 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MedicalClinic",
+  "@type": ["MedicalClinic","LocalBusiness"],
+  "@id": "https://permaipolyclinicsfortuna.com/#clinic",
   "name": "Permai Polyclinics Fortuna",
-  "image": "pictures/logo.png",
+  "url": "https://permaipolyclinicsfortuna.com/",
+  "image": "https://permaipolyclinicsfortuna.com/assets/img/hero_poster.jpg",
+  "logo": "https://permaipolyclinicsfortuna.com/pictures/logo.png",
   "telephone": "+6088239393",
   "email": "permaipolyclinics.fortuna@gmail.com",
+  "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Ground Floor, Lot 3, Block D2, Lorong Seroja 2, Fortuna Commercial Centre, Mile 2.5, Jalan Penampang",
@@ -45,12 +49,54 @@
     "postalCode": "88200",
     "addressCountry": "MY"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 5.9522451,
+    "longitude": 116.0785631
+  },
+  "hasMap": "https://maps.app.goo.gl/xCxkuitxhSmAWRkA6",
+  "areaServed": [
+    {"@type": "City", "name": "Kota Kinabalu"},
+    {"@type": "Place", "name": "Penampang"}
+  ],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
     "opens": "00:00",
     "closes": "23:59"
   },
+  "sameAs": [
+    "https://www.instagram.com/permaipolyclinics.fortuna",
+    "https://www.facebook.com/profile.php?id=61587336903099",
+    "https://maps.app.goo.gl/xCxkuitxhSmAWRkA6"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "136",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Bing f"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Dr Nicholas is the kind of doctor you wish you'd met earlier. Super approachable and friendly, and he doesn't make you feel like just another patient. He went out of his way to make sure I was okay before I left. Will definitely be bringing my family to this clinic. Truly one of the best."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Leng Foo"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Came in with my son who was having a really bad flu and cough. Dr. Nicholas was very patient and made sure my son was thoroughly checked. Just within a week he was back to feeling ok, and we were able to continue our trip in Sabah. Kudos to the doctor and the whole team."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Rachel S Yong"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "I came here specifically for Dr. Nicholas! He's very gentle with my 3 kids and listens to my preferences. I also bring my dad here for his check ups. Definitely recommend!"
+    }
+  ],
   "parentOrganization": {
     "@type": "MedicalOrganization",
     "name": "Permai Polyclinics Group",
