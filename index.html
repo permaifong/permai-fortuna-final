@@ -262,20 +262,43 @@
 
   /* ---------- Services ---------- */
   .svc-grid{
+    position:relative;
     margin-top:56px;
     display:grid;grid-template-columns:1fr 1fr;
     column-gap:72px;
   }
-  .svc{
-    display:flex;gap:18px;
-    padding:28px 0;
-    border-bottom:1px solid var(--hairline);
+  /* cursor-tracking spotlight glow — a soft teal radial light that follows the pointer */
+  .svc-glow{
+    position:absolute;inset:-24px;pointer-events:none;z-index:0;
+    opacity:0;transition:opacity .4s ease;border-radius:24px;
+    background:radial-gradient(300px circle at var(--mx,50%) var(--my,50%), rgba(14,125,114,.14), transparent 70%);
   }
+  .svc-grid:hover .svc-glow{opacity:1}
+  .svc{
+    position:relative;z-index:1;
+    display:flex;gap:18px;align-items:flex-start;
+    padding:28px 4px;
+  }
+  /* hairline separator as a pseudo so its colour can transition independently of the reveal */
+  .svc::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+    background:var(--hairline);transition:background .4s cubic-bezier(.16,1,.3,1);
+  }
+  .svc:hover::after{background:rgba(14,125,114,.4)}
+  /* staggered scroll-in cascade (specificity beats .reveal's transition-delay:0) */
+  .svc-grid .svc:nth-child(1){transition-delay:0s}
+  .svc-grid .svc:nth-child(2){transition-delay:.06s}
+  .svc-grid .svc:nth-child(3){transition-delay:.12s}
+  .svc-grid .svc:nth-child(4){transition-delay:.18s}
+  .svc-grid .svc:nth-child(5){transition-delay:.24s}
+  .svc-grid .svc:nth-child(6){transition-delay:.3s}
+  .svc-grid .svc:nth-child(7){transition-delay:.36s}
+  .svc-grid .svc:nth-child(8){transition-delay:.42s}
   .svc .ic{
     flex:none;width:46px;height:46px;border-radius:13px;
     display:flex;align-items:center;justify-content:center;
     background:rgba(14,125,114,.09);color:var(--accent);
-    transition:background .3s cubic-bezier(.16,1,.3,1),color .3s,transform .3s cubic-bezier(.16,1,.3,1);
+    transition:background .35s cubic-bezier(.16,1,.3,1),color .35s,transform .35s cubic-bezier(.16,1,.3,1);
   }
   .svc .ic svg{width:23px;height:23px}
   .svc:hover .ic{background:var(--accent);color:#fff;transform:translateY(-3px)}
@@ -284,8 +307,8 @@
     font-size:23px;font-weight:400;line-height:1.25;
     transition:color .25s;
   }
-  .svc p{margin-top:7px;color:var(--muted);font-size:15px}
   .svc:hover h3{color:var(--accent)}
+  .svc p{margin-top:8px;color:var(--muted);font-size:15px}
 
   /* ---------- Visit ---------- */
   .visit-grid{
@@ -565,6 +588,7 @@
           <p>Practical lifestyle and preventive guidance to keep you and your family healthy.</p>
         </div>
       </div>
+      <div class="svc-glow" aria-hidden="true"></div>
     </div>
   </div>
 </section>
@@ -855,6 +879,18 @@
       });
     }, {threshold:.2, rootMargin:'0px 0px -40px 0px'});
     els.forEach(function(el){ io.observe(el); });
+  })();
+
+  /* Services: cursor-tracking spotlight glow */
+  (function(){
+    var grid = document.querySelector('.svc-grid');
+    var glow = grid && grid.querySelector('.svc-glow');
+    if (!grid || !glow) return;
+    grid.addEventListener('pointermove', function(e){
+      var r = glow.getBoundingClientRect();
+      glow.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      glow.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
   })();
 </script>
 
