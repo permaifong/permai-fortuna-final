@@ -267,14 +267,24 @@
     column-gap:72px;
   }
   .svc{
+    display:flex;gap:18px;
     padding:28px 0;
     border-bottom:1px solid var(--hairline);
   }
+  .svc .ic{
+    flex:none;width:46px;height:46px;border-radius:13px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(14,125,114,.09);color:var(--accent);
+    transition:background .3s cubic-bezier(.16,1,.3,1),color .3s,transform .3s cubic-bezier(.16,1,.3,1);
+  }
+  .svc .ic svg{width:23px;height:23px}
+  .svc:hover .ic{background:var(--accent);color:#fff;transform:translateY(-3px)}
+  .svc .txt{flex:1;min-width:0}
   .svc h3{
-    font-size:24px;font-weight:400;line-height:1.25;
+    font-size:23px;font-weight:400;line-height:1.25;
     transition:color .25s;
   }
-  .svc p{margin-top:8px;color:var(--muted);font-size:15px}
+  .svc p{margin-top:7px;color:var(--muted);font-size:15px}
   .svc:hover h3{color:var(--accent)}
 
   /* ---------- Visit ---------- */
@@ -500,36 +510,60 @@
     </div>
     <div class="svc-grid">
       <div class="svc reveal">
-        <h3>GP Consultations</h3>
-        <p>Walk-in doctor consultations and check-ups for adults, children and the elderly.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></span>
+        <div class="txt">
+          <h3>GP Consultations</h3>
+          <p>Walk-in doctor consultations and check-ups for adults, children and the elderly.</p>
+        </div>
       </div>
       <div class="svc reveal">
-        <h3>Common Illness Treatment</h3>
-        <p>Diagnosis and treatment for colds, flu, fever, infections and minor injuries.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg></span>
+        <div class="txt">
+          <h3>Common Illness Treatment</h3>
+          <p>Diagnosis and treatment for colds, flu, fever, infections and minor injuries.</p>
+        </div>
       </div>
       <div class="svc reveal">
-        <h3>Health Screening</h3>
-        <p>Routine check-up packages with physical examinations, blood pressure checks and lab tests.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span>
+        <div class="txt">
+          <h3>Health Screening</h3>
+          <p>Routine check-up packages with physical examinations, blood pressure checks and lab tests.</p>
+        </div>
       </div>
       <div class="svc reveal">
-        <h3>Vaccinations &amp; Immunisations</h3>
-        <p>Childhood immunisations, flu shots, travel vaccines and adult boosters for all ages.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/></svg></span>
+        <div class="txt">
+          <h3>Vaccinations &amp; Immunisations</h3>
+          <p>Childhood immunisations, flu shots, travel vaccines and adult boosters for all ages.</p>
+        </div>
       </div>
       <div class="svc reveal">
-        <h3>Chronic Disease Management</h3>
-        <p>Ongoing care for diabetes, hypertension, asthma and heart conditions, with regular follow-ups.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+        <div class="txt">
+          <h3>Chronic Disease Management</h3>
+          <p>Ongoing care for diabetes, hypertension, asthma and heart conditions, with regular follow-ups.</p>
+        </div>
       </div>
       <div class="svc reveal">
-        <h3>Minor Surgical Procedures</h3>
-        <p>Wound care, suturing, incision and drainage, and other minor procedures done on site.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg></span>
+        <div class="txt">
+          <h3>Minor Surgical Procedures</h3>
+          <p>Wound care, suturing, incision and drainage, and other minor procedures done on site.</p>
+        </div>
       </div>
       <div class="svc reveal">
-        <h3>IV Drips &amp; Injections</h3>
-        <p>Rehydration drips, vitamin boosters, nebulisation and injections administered on site.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
+        <div class="txt">
+          <h3>IV Drips &amp; Injections</h3>
+          <p>Rehydration drips, vitamin boosters, nebulisation and injections administered on site.</p>
+        </div>
       </div>
       <div class="svc reveal">
-        <h3>Preventive Care Advice</h3>
-        <p>Practical lifestyle and preventive guidance to keep you and your family healthy.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div class="txt">
+          <h3>Preventive Care Advice</h3>
+          <p>Practical lifestyle and preventive guidance to keep you and your family healthy.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -537,7 +571,7 @@
 
 <section id="faq" style="padding-top:0">
   <div class="wrap">
-    <h2 class="reveal">Good to know.</h2>
+    <h2 class="reveal">Frequently asked questions.</h2>
     <div class="faq reveal" style="margin-top:40px">
       <details>
         <summary>Do you offer knee pain treatment and knee injection therapy?<span class="ind">+</span></summary>
