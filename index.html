@@ -976,15 +976,14 @@
       var a = e.target.closest('a');
       if (!a) return;
       var href = a.getAttribute('href') || '';
-      if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) {
-        gtag('event', 'whatsapp_click', {link_url: href});
-      } else if (href.indexOf('tel:') === 0) {
-        gtag('event', 'call_click', {link_url: href});
-      } else if (href.indexOf('mailto:') === 0) {
-        gtag('event', 'email_click', {link_url: href});
-      } else if (href.indexOf('google.com/maps') !== -1 || href.indexOf('maps.app.goo.gl') !== -1) {
-        gtag('event', 'directions_click', {link_url: href});
-      }
+      var name = '';
+      if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) name = 'whatsapp_click';
+      else if (href.indexOf('tel:') === 0) name = 'call_click';
+      else if (href.indexOf('mailto:') === 0) name = 'email_click';
+      else if (href.indexOf('google.com/maps') !== -1 || href.indexOf('maps.app.goo.gl') !== -1) name = 'directions_click';
+      // transport_type:'beacon' sends via navigator.sendBeacon so the hit survives the
+      // page unloading when the link opens WhatsApp / Maps / the dialer (outbound-click race).
+      if (name) gtag('event', name, {link_url: href, transport_type: 'beacon'});
     }, true);
   })();
 </script>
