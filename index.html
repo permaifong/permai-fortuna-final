@@ -105,6 +105,18 @@
       "reviewBody": "I came here specifically for Dr. Nicholas! He's very gentle with my 3 kids and listens to my preferences. I also bring my dad here for his check ups. Definitely recommend!"
     }
   ],
+  "availableService": [
+    {"@type": "MedicalProcedure", "name": "Walk-in GP consultation"},
+    {"@type": "MedicalTest", "name": "Health screening and medical check-up"},
+    {"@type": "MedicalTest", "name": "Blood test and lab screening"},
+    {"@type": "MedicalTest", "name": "ECG (electrocardiogram) heart check"},
+    {"@type": "MedicalTest", "name": "Ultrasound scan"},
+    {"@type": "MedicalTherapy", "name": "IV drip and vitamin therapy"},
+    {"@type": "MedicalProcedure", "name": "Vaccinations and immunisations"},
+    {"@type": "MedicalProcedure", "name": "Intra-articular knee injection"},
+    {"@type": "MedicalProcedure", "name": "Minor surgical procedures"},
+    {"@type": "MedicalTherapy", "name": "Chronic disease management"}
+  ],
   "parentOrganization": {
     "@type": "MedicalOrganization",
     "name": "Permai Polyclinics Group",
@@ -141,6 +153,26 @@
       "@type": "Question",
       "name": "Do you offer pre-employment health screening?",
       "acceptedAnswer": {"@type": "Answer", "text": "Yes. We provide pre-employment medical examinations and health screening packages, with the report and forms completed for your employer."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer health screening or medical check-up packages?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer medical check-up and health screening packages for individuals and pre-employment, including blood tests, lab screening, ECG heart checks and ultrasound scans. Walk in any time, no appointment needed."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a blood test at the clinic?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We carry out blood tests and lab screening, either on their own or as part of a check-up. Walk in and our doctor will arrange the tests you need."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have ECG and ultrasound services?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We provide ECG heart checks and ultrasound scans at the clinic. Walk in for an assessment and the doctor will advise which tests are appropriate."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer IV drips and vitamin therapy?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We provide IV drip and vitamin therapy, hydration drips and vitamin injections on site, 24 hours a day, when the doctor finds them suitable."}
     },
     {
       "@type": "Question",
@@ -572,7 +604,7 @@
 
 <header class="hero" id="top">
   <div class="hero-media" aria-hidden="true">
-    <img class="hero-img" src="assets/img/hero_poster.jpg?v=3" alt="" fetchpriority="high">
+    <img class="hero-img" src="assets/img/hero_poster.jpg?v=3" alt="Permai Polyclinics Fortuna, 24-hour walk-in clinic in Kota Kinabalu" fetchpriority="high">
     <video muted loop playsinline preload="none" aria-hidden="true"></video>
   </div>
   <div class="scrim"></div>
@@ -612,7 +644,7 @@
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></span>
         <div class="txt">
           <h3>GP Consultations</h3>
-          <p>Walk-in doctor consultations and check-ups for adults, children and the elderly.</p>
+          <p>Walk-in GP consultations and check-ups for adults, children and the elderly, 24 hours a day with no appointment needed.</p>
         </div>
       </div>
       <div class="svc reveal">
@@ -626,7 +658,7 @@
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span>
         <div class="txt">
           <h3>Health Screening</h3>
-          <p>Routine check-up packages with physical examinations, blood pressure checks and lab tests.</p>
+          <p>Medical check-up and health screening packages with blood tests, lab screening and ECG heart checks. Pre-employment medicals and ultrasound scans also available.</p>
         </div>
       </div>
       <div class="svc reveal">
@@ -654,7 +686,7 @@
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
         <div class="txt">
           <h3>IV Drips &amp; Injections</h3>
-          <p>Rehydration drips, vitamin boosters, nebulisation and injections administered on site.</p>
+          <p>IV drip and vitamin therapy, hydration drips, vitamin injections and nebulisation, administered on site.</p>
         </div>
       </div>
       <div class="svc reveal">
@@ -692,6 +724,22 @@
       <details>
         <summary>Do you offer pre-employment health screening?<span class="ind">+</span></summary>
         <div class="ans">Yes. We provide pre-employment medical examinations and health screening packages, with the report and forms completed for your employer.</div>
+      </details>
+      <details>
+        <summary>Do you offer health screening or medical check-up packages?<span class="ind">+</span></summary>
+        <div class="ans">Yes. We offer medical check-up and health screening packages for individuals and pre-employment, including blood tests, lab screening, ECG heart checks and ultrasound scans. Walk in any time, no appointment needed.</div>
+      </details>
+      <details>
+        <summary>Can I get a blood test at the clinic?<span class="ind">+</span></summary>
+        <div class="ans">Yes. We carry out blood tests and lab screening, either on their own or as part of a check-up. Walk in and our doctor will arrange the tests you need.</div>
+      </details>
+      <details>
+        <summary>Do you have ECG and ultrasound services?<span class="ind">+</span></summary>
+        <div class="ans">Yes. We provide ECG heart checks and ultrasound scans at the clinic. Walk in for an assessment and the doctor will advise which tests are appropriate.</div>
+      </details>
+      <details>
+        <summary>Do you offer IV drips and vitamin therapy?<span class="ind">+</span></summary>
+        <div class="ans">Yes. We provide IV drip and vitamin therapy, hydration drips and vitamin injections on site, 24 hours a day, when the doctor finds them suitable.</div>
       </details>
       <details>
         <summary>Do you treat children and families?<span class="ind">+</span></summary>
