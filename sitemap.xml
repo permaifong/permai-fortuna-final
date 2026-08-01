@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://permaipolyclinicsfortuna.com/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://permaipolyclinicsfortuna.com/pictures/og-1x1.jpg</image:loc>
+      <image:title>Permai Polyclinics Fortuna reception team</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://permaipolyclinicsfortuna.com/pictures/og-4x3.jpg</image:loc>
+      <image:title>Permai Polyclinics Fortuna reception team</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://permaipolyclinicsfortuna.com/pictures/og-16x9.jpg</image:loc>
+      <image:title>Permai Polyclinics Fortuna reception team</image:title>
+    </image:image>
   </url>
 </urlset>
