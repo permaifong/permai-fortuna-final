@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /*.md$
+Disallow: /.gitignore
+Disallow: /CNAME
 
 Sitemap: https://permaipolyclinicsfortuna.com/sitemap.xml

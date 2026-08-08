@@ -1,4 +1,6 @@
-DESIGN.md
-HANDOFF.md
+*.md
+*.xlsx
 .claude/
 .playwright-mcp/
+_tools/
+google picture/
