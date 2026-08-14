@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Hero background is painted from CSS, so preload it to keep LCP where it was as an <img>. -->
+<link rel="preload" as="image" href="assets/img/hero_poster.jpg?v=3" fetchpriority="high">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KTE79ZGXM"></script>
 <script>
@@ -51,6 +53,8 @@
   "name": "Permai Polyclinics Fortuna",
   "url": "https://permaipolyclinicsfortuna.com/",
   "image": [
+    "https://permaipolyclinicsfortuna.com/pictures/permai-fortuna-clinic-team.jpg",
+    "https://permaipolyclinicsfortuna.com/pictures/dr-nicholas-jeremiah.jpg",
     "https://permaipolyclinicsfortuna.com/pictures/og-1x1.jpg",
     "https://permaipolyclinicsfortuna.com/pictures/og-4x3.jpg",
     "https://permaipolyclinicsfortuna.com/pictures/og-16x9.jpg"
@@ -311,6 +315,10 @@
     object-fit:cover;
   }
   .hero .hero-img{
+    background-image:url("assets/img/hero_poster.jpg?v=3");
+    background-size:cover;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
     transform-origin:50% 40%;
     animation:kenburns 28s ease-in-out infinite alternate;
   }
@@ -668,7 +676,9 @@
 
 <header class="hero" id="top">
   <div class="hero-media" aria-hidden="true">
-    <img class="hero-img" src="assets/img/hero_poster.jpg?v=3" alt="Permai Polyclinics Fortuna, 24-hour walk-in clinic in Kota Kinabalu" fetchpriority="high">
+    <!-- Decorative background only. Kept as a CSS background rather than an <img> so search
+         engines do not treat the scenery as the image that represents this page. -->
+    <div class="hero-img" role="presentation"></div>
     <video muted loop playsinline preload="none" aria-hidden="true"></video>
   </div>
   <div class="scrim"></div>

@@ -1,11 +1,20 @@
-*.md
-*.xlsx
+# Everything that is not the deployed site lives in _work/
+_work/
+
+# Tooling / editor caches
 .claude/
 .playwright-mcp/
-_tools/
-google picture/
+
+# Docs, notes, owner-supplied source material (safety nets — never publish)
+*.md
+*.xlsx
 *.docx
+*.pdf
 /*.png
 sample*
+_tools/
+google picture/
 /bio/
 /*plan*/
+/*questions*/
+/*screenshots*/

@@ -4,4 +4,8 @@ Disallow: /*.md$
 Disallow: /.gitignore
 Disallow: /CNAME
 
+# Decorative hero scenery. Blocked so it cannot be chosen as the search result
+# thumbnail for this site. Users still load it normally; this affects crawlers only.
+Disallow: /assets/img/hero_poster.jpg
+
 Sitemap: https://permaipolyclinicsfortuna.com/sitemap.xml

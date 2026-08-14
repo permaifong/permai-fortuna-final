@@ -3,9 +3,17 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://permaipolyclinicsfortuna.com/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://permaipolyclinicsfortuna.com/pictures/permai-fortuna-clinic-team.jpg</image:loc>
+      <image:title>The doctor, nursing and clinic team at Permai Polyclinics Fortuna, Kota Kinabalu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://permaipolyclinicsfortuna.com/pictures/dr-nicholas-jeremiah.jpg</image:loc>
+      <image:title>Dr. Nicholas Jeremiah, resident doctor at Permai Polyclinics Fortuna</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://permaipolyclinicsfortuna.com/pictures/og-1x1.jpg</image:loc>
       <image:title>Permai Polyclinics Fortuna reception team</image:title>
