@@ -384,13 +384,6 @@
     display:grid;grid-template-columns:1fr 1fr;
     column-gap:72px;
   }
-  /* cursor-tracking spotlight glow — a soft teal radial light that follows the pointer */
-  .svc-glow{
-    position:absolute;inset:-24px;pointer-events:none;z-index:0;
-    opacity:0;transition:opacity .4s ease;border-radius:24px;
-    background:radial-gradient(300px circle at var(--mx,50%) var(--my,50%), rgba(14,125,114,.14), transparent 70%);
-  }
-  .svc-grid:hover .svc-glow{opacity:1}
   .svc{
     position:relative;z-index:1;
     display:flex;gap:18px;align-items:flex-start;
@@ -446,6 +439,61 @@
     display:block;width:100%;height:480px;border:0;
     filter:saturate(.85);
   }
+
+  /* ---------- Team (doctor + nurses) ---------- */
+  .team{background:var(--band);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+  .team .overline{
+    font-size:12px;letter-spacing:.28px;text-transform:uppercase;
+    color:var(--accent);font-weight:600;
+  }
+  .team-head h2{margin-top:14px}
+
+  /* doctor: portrait left, text right */
+  .doc{
+    margin-top:56px;
+    display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center;
+  }
+  .doc-photo{
+    position:relative;border-radius:20px;overflow:hidden;
+    border:1px solid var(--hairline);
+    background:var(--band-deep);
+    box-shadow:0 30px 60px -40px rgba(23,33,31,.45);
+  }
+  .doc-photo img{
+    width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;
+    transition:transform 1.2s cubic-bezier(.16,1,.3,1);
+  }
+  .doc-photo:hover img{transform:scale(1.035)}
+  .doc-name{font-size:clamp(26px,3vw,36px);font-weight:300;line-height:1.15}
+  .doc-role{
+    margin-top:10px;display:inline-flex;align-items:center;gap:8px;
+    padding:7px 15px;border-radius:var(--r-pill);
+    background:rgba(14,125,114,.09);color:var(--accent);
+    font-size:13px;font-weight:600;letter-spacing:.02em;
+  }
+  .doc-body p{margin-top:18px;color:var(--muted);font-size:16px;line-height:1.65}
+  .doc-facts{
+    margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px;
+  }
+  .doc-facts .f{padding:14px 0;border-bottom:1px solid var(--hairline)}
+  .doc-facts .f .k{font-size:12px;letter-spacing:.24px;color:var(--muted);text-transform:uppercase}
+  .doc-facts .f .v{margin-top:5px;font-size:16px}
+
+  /* nurses: wide photo + supporting copy */
+  .nurses{margin-top:96px}
+  .nurses-photo{
+    position:relative;
+    border-radius:20px;overflow:hidden;border:1px solid var(--hairline);
+    box-shadow:0 30px 60px -40px rgba(23,33,31,.45);
+  }
+  .nurses-photo img{
+    width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:50% 42%;
+  }
+  .nurses-figure{margin-top:40px}
+  .nurses-figure figcaption{
+    margin-top:16px;color:var(--muted);font-size:15px;line-height:1.6;
+  }
+  .nurses-figure figcaption b{color:var(--ink);font-weight:600}
 
   /* ---------- FAQ ---------- */
   .faq{max-width:780px}
@@ -578,8 +626,13 @@
     .visit-grid{grid-template-columns:1fr;gap:40px}
     .map-shell iframe{height:360px}
     .review-grid{grid-template-columns:1fr;gap:18px}
+    .doc{grid-template-columns:1fr;gap:36px}
+    .doc-photo img{aspect-ratio:1/1;object-position:50% 20%}
+    .nurses-photo img{aspect-ratio:4/3}
+    .nurses{margin-top:72px}
   }
   @media (max-width:760px){
+    .doc-facts{grid-template-columns:1fr;gap:0}
     .nav-links a.link{display:none}
     section{padding:80px 0}
     .stats{padding:56px 0}
@@ -605,6 +658,7 @@
     </a>
     <div class="nav-links">
       <a class="link" href="#services">Services</a>
+      <a class="link" href="#team">Our Team</a>
       <a class="link" href="#faq">FAQ</a>
       <a class="link" href="#visit">Visit Us</a>
       <a class="btn btn-primary btn-nav" href="https://wa.me/60129393537" target="_blank" rel="noopener">WhatsApp Us</a>
@@ -706,7 +760,57 @@
           <p>Practical lifestyle and preventive guidance to keep you and your family healthy.</p>
         </div>
       </div>
-      <div class="svc-glow" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="team-head reveal">
+      <span class="overline">Meet the team</span>
+      <h2>The team behind your care.</h2>
+      <p class="section-sub">A small clinic team you get to know by name. Whatever hour you walk in, there is always a doctor and a nurse on duty, ready to see you.</p>
+    </div>
+
+    <div class="doc">
+      <figure class="doc-photo reveal">
+        <img src="pictures/dr-nicholas-jeremiah.jpg" alt="Dr. Nicholas Jeremiah, resident doctor at Permai Polyclinics Fortuna, Kota Kinabalu" loading="lazy" width="1920" height="2560">
+      </figure>
+      <div class="doc-body reveal">
+        <div class="doc-name">Dr. Nicholas Jeremiah</div>
+        <span class="doc-role">Resident Doctor &middot; Permai Polyclinics Fortuna</span>
+        <p>A graduate of Monash University with close to 13 years in medicine, Dr. Nicholas believes good healthcare starts with making patients feel heard, understood and at ease.</p>
+        <p>Patients know him for his calm manner and his willingness to take his time. He listens carefully, pays attention to the small details, and never makes a consultation feel rushed. More than giving you a diagnosis, he makes a point of explaining what is happening, why it is happening and what comes next, going through the treatment options and answering questions along the way.</p>
+        <p>For Dr. Nicholas, treating the illness is only part of the job. Making sure you leave feeling cared for as a person, and not just as a case, matters just as much.</p>
+        <div class="doc-facts">
+          <div class="f">
+            <div class="k">Medical degree</div>
+            <div class="v">Monash University</div>
+          </div>
+          <div class="f">
+            <div class="k">Experience</div>
+            <div class="v">Close to 13 years in medicine</div>
+          </div>
+          <div class="f">
+            <div class="k">Consultations</div>
+            <div class="v">Walk in any hour, no appointment needed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nurses">
+      <div class="reveal">
+        <h2 style="font-size:clamp(26px,3vw,38px)">Our nurses and clinic staff.</h2>
+        <p class="section-sub">Two staff nurses, two medical assistants, an assistant pharmacist and a clinical assistant. They handle your dressings, injections and blood tests, prepare your medicine at the pharmacy counter, and are on duty at 3am the same as they are at 3pm.</p>
+      </div>
+
+      <figure class="nurses-figure reveal">
+        <div class="nurses-photo">
+          <img src="pictures/permai-fortuna-clinic-team.jpg" alt="The doctor, nursing and clinic team at Permai Polyclinics Fortuna, Kota Kinabalu" loading="lazy" width="2560" height="1920">
+        </div>
+        <figcaption>From left to right: <b>Abygail</b>, <b>Izzati</b>, <b>Dr. Nicholas</b>, <b>Dennoel</b> and <b>Chuan Yee</b>.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -1013,18 +1117,6 @@
       });
     }, {threshold:.2, rootMargin:'0px 0px -40px 0px'});
     els.forEach(function(el){ io.observe(el); });
-  })();
-
-  /* Services: cursor-tracking spotlight glow */
-  (function(){
-    var grid = document.querySelector('.svc-grid');
-    var glow = grid && grid.querySelector('.svc-glow');
-    if (!grid || !glow) return;
-    grid.addEventListener('pointermove', function(e){
-      var r = glow.getBoundingClientRect();
-      glow.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      glow.style.setProperty('--my', (e.clientY - r.top) + 'px');
-    });
   })();
 
   /* GA4 conversion tracking: fire events on key contact actions (delegated, one listener) */

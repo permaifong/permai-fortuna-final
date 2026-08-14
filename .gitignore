@@ -4,3 +4,8 @@
 .playwright-mcp/
 _tools/
 google picture/
+*.docx
+/*.png
+sample*
+/bio/
+/*plan*/
