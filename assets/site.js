@@ -137,6 +137,6 @@ document.addEventListener('click', function (e) {
   var b = e.target.closest && e.target.closest('.pt-more');
   if (!b) return;
   var open = !b.previousElementSibling.classList.toggle('collapsed');
-  b.textContent = open ? 'Show fewer tests' : b.getAttribute('data-label');
+  b.textContent = open ? (document.documentElement.lang === 'ms' ? 'Tunjuk lebih sedikit' : 'Show fewer tests') : b.getAttribute('data-label');
   b.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
