@@ -93,7 +93,9 @@
 .bcard .tile.photo img{width:100%;height:100%;object-fit:cover}
 @media(max-width:640px){.tbl .m-hide{display:none}.tbl th,.tbl td{padding:.75em .8em}}
 @media(max-width:640px){.tbl table{font-size:.84em}.tbl tbody th{min-width:0}.tbl th,.tbl td{padding:.7em .6em;hyphens:auto}}
+@media(max-width:400px){.tbl th,.tbl td{padding:.65em .45em}}
 .byline img.logo,.author img.logo{object-fit:contain;background:#fff;border:1px solid var(--line);padding:9px}
 .author img.logo{padding:16px}
+.tbl.nw{white-space:normal}  /* site.css .nw (nowrap) would otherwise stop every cell wrapping */
 .tbl.nw tbody th{white-space:nowrap}
 .tbl .grp th{background:#fff6ec;color:#7a3d0b;font-size:.75em;letter-spacing:1.1px;text-transform:uppercase;padding-top:.9em;padding-bottom:.5em;border-top:1px solid #f3dcc4}
