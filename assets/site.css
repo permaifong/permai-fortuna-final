@@ -629,3 +629,5 @@ body.scrolled .wa-tag{opacity:0;visibility:hidden}
 
 /* keep hyphenated keywords on one line (plain hyphen, readable by search engines) */
 .nw{white-space:nowrap}
+.pk ul{margin-top:1.1em;padding-top:1em;border-top:1px solid rgba(0,0,0,.08)}
+.vx .meta a{white-space:nowrap}
