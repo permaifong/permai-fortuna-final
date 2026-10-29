@@ -99,3 +99,24 @@
 .tbl.nw{white-space:normal}  /* site.css .nw (nowrap) would otherwise stop every cell wrapping */
 .tbl.nw tbody th{white-space:nowrap}
 .tbl .grp th{background:#fff6ec;color:#7a3d0b;font-size:.75em;letter-spacing:1.1px;text-transform:uppercase;padding-top:.9em;padding-bottom:.5em;border-top:1px solid #f3dcc4}
+/* blood pressure tables: shared column widths so the two tables line up; phones show Category + Reading only */
+.tbl .rd{color:var(--ink)}
+.tbl .rd b{display:block;font-weight:600;white-space:nowrap}
+.tbl .rd span{display:block;font-size:.9em;color:var(--body);white-space:nowrap}
+.tbl .rd span b{display:inline;color:var(--ink)}
+.tbl.bp th:nth-child(1){width:14%}
+.tbl.bp th:nth-child(2){width:19%}
+.tbl.bp th:nth-child(3){width:20%}
+.tbl.bp th:nth-child(4){width:23%}
+.tbl.bp th:nth-child(5){width:24%}
+.tbl.warn{border-color:#f3dcc4}
+.tbl.warn thead th{background:#fff6ec;color:#7a3d0b}
+.tbl.warn tbody tr+tr th,.tbl.warn tbody tr+tr td{border-top-color:#f8eadb}
+@media(max-width:640px){
+.tbl.bp tr>:nth-child(3),.tbl.bp tr>:nth-child(4){display:none}
+.tbl.bp table{font-size:1em}
+.tbl.bp th,.tbl.bp td{padding:.85em 1em}
+.tbl.bp th:nth-child(1){width:31%}
+.tbl.bp th:nth-child(2){width:auto}
+.tbl .rd b,.tbl .rd span{display:inline;font-size:1em}
+}
