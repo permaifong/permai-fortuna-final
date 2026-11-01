@@ -464,12 +464,12 @@ body.overlay.home:not(.tint) nav:not(.solid):not(.open) .nav-live{background:rgb
 .nav-live .dot,.wa-tag .dot{position:relative;width:8px;height:8px;border-radius:50%;background:#2fd47c;flex:0 0 auto}
 .nav-live .dot::after,.wa-tag .dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:#2fd47c;animation:livepulse 2s ease-out infinite}
 .wa-tag{display:none}
-@media(max-width:1420px){
+@media(max-width:1440px){
   html[lang="ms"] .nav-live{display:none}
   html[lang="ms"] .wa-tag{display:inline-flex;align-items:center;gap:7px;position:absolute;bottom:calc(100% + 10px);right:0;white-space:nowrap;background:#fff;color:var(--ink);font-size:13px;font-weight:600;padding:.45em .85em .45em .7em;border-radius:99px;box-shadow:0 8px 22px -10px rgba(0,0,0,.35);border:1px solid var(--line)}
   html[lang="ms"] .wa-tag::after{content:"";position:absolute;right:22px;top:100%;border:6px solid transparent;border-top-color:#fff}
 }
-@media(max-width:1280px){
+@media(max-width:1310px){
   .nav-live{display:none}
   .wa-tag{display:inline-flex;align-items:center;gap:7px;position:absolute;bottom:calc(100% + 10px);right:0;white-space:nowrap;background:#fff;color:var(--ink);font-size:13px;font-weight:600;padding:.45em .85em .45em .7em;border-radius:99px;box-shadow:0 8px 22px -10px rgba(0,0,0,.35);border:1px solid var(--line)}
   .wa-tag::after{content:"";position:absolute;right:22px;top:100%;border:6px solid transparent;border-top-color:#fff}
@@ -647,3 +647,89 @@ body.scrolled .wa-tag{opacity:0;visibility:hidden}
 .nw{white-space:nowrap}
 .pk ul{margin-top:1.1em;padding-top:1em;border-top:1px solid rgba(0,0,0,.08)}
 .vx .meta a{white-space:nowrap}
+
+/* women's health page (2026-11-01) */
+.wh-cards{padding-top:clamp(48px,5vw,96px);padding-bottom:clamp(48px,5vw,96px)}
+.wh-cards h2{margin-bottom:clamp(24px,2.6vw,48px)}
+@media(max-width:1100px){.wh-cards .vx-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:960px){.wh-cards .vx-grid{grid-template-columns:1fr;max-width:36em}}
+.tbc{display:inline-block;margin-left:.6em;padding:.15em .6em;border-radius:99px;background:#f2c14e;color:#3a2a00;letter-spacing:.6px}
+.wh-doc .photo{border-radius:12px;overflow:hidden;aspect-ratio:1/1;max-width:460px;width:100%;justify-self:center;background:#0d5a55}
+.wh-doc .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.wh-doc .role{color:var(--green);font-weight:600;font-size:.8em;letter-spacing:1.2px;text-transform:uppercase;margin:-.1em 0 1em}
+.wh-doc p + p,.wh-ps p + p{margin-top:.8em}
+@media(max-width:900px){.wh-doc .photo{max-width:420px;justify-self:start}}
+
+/* team: two doctors side by side, with their hours (2026-11-01) */
+.docs-a{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,80px);max-width:1120px;margin:0 auto}
+.dca{display:flex;flex-direction:column}
+.dca .photo{border-radius:10px;overflow:hidden;aspect-ratio:5/4;background:#0d5a55}
+.dca .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.dca h3{font-size:clamp(24px,1.7vw,36px);margin-top:.9em}
+.dca .role{color:var(--green);font-weight:600;font-size:.8em;letter-spacing:1.2px;text-transform:uppercase;margin:.5em 0 .9em}
+.dca p{line-height:1.6}
+.dca .hrs{margin-top:auto;padding-top:1.2em}
+.dca .hrs dl{background:var(--mint);border-radius:10px;padding:.7em 1.1em}
+.dca .hrs-h{font-size:.72em;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--green);margin-bottom:.55em}
+.dca .hrs dl div{display:flex;flex-wrap:wrap;justify-content:space-between;column-gap:1em;padding:.3em 0}
+.dca .hrs dt,.dca .hrs dd{white-space:nowrap}
+.dca .hrs dd{margin-left:auto}
+.dca .hrs dl div + div{border-top:1px solid var(--line)}
+.dca .hrs dt{color:var(--body);font-size:.95em}
+.dca .hrs dd{font-weight:600;color:var(--ink);text-align:right;font-size:.95em}
+.dca .hrs dd.off{color:var(--body);font-weight:500}
+.dca .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:1.2em;padding-top:1.1em;border-top:1px solid var(--line)}
+.dca .facts dt{font-size:.72em;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--green)}
+.dca .facts dd{font-weight:500;color:var(--ink);line-height:1.4;margin-top:.3em;font-size:.92em}
+@media(max-width:900px){.docs-a{grid-template-columns:1fr;max-width:520px}.dca .facts{grid-template-columns:1fr;gap:10px}}
+
+/* women's health hero (option C, 2026-11-01): photo, headline bottom-left, frosted card with the female doctor's hours */
+.whh{position:relative;min-height:min(88vh,940px);display:flex;align-items:flex-end;overflow:hidden;color:#fff;background:#2c4a45 center/cover no-repeat}
+.whh picture{display:contents}
+.whh > picture img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:62% 35%}
+.whh::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,36,33,.9) 0%,rgba(5,36,33,.78) 30%,rgba(5,36,33,.25) 55%,rgba(5,36,33,0) 72%),linear-gradient(0deg,rgba(5,36,33,.55) 0%,rgba(5,36,33,0) 40%),linear-gradient(180deg,rgba(5,36,33,.6) 0%,rgba(5,36,33,0) 20%)}
+.whh-in{position:relative;z-index:2;width:100%;max-width:1560px;margin:0 auto;padding:calc(var(--navh) + 40px) var(--gutter) clamp(44px,5vw,96px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
+.whh h1{color:#fff;font-size:clamp(46px,5.4vw,112px);line-height:.96;letter-spacing:-.03em;max-width:11em;margin:0 0 .35em;text-wrap:balance}
+.whh h1 .hl{color:var(--gold)}
+.whh-lead{font-size:var(--lead);line-height:1.55;color:rgba(255,255,255,.9);max-width:28em;margin-bottom:1.5em}
+.whh-act{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
+.whh .pill{background:var(--gold);color:var(--ink-d)}.whh .pill:hover{background:#ffd36b}
+.whh .call{color:rgba(255,255,255,.88)}.whh .call strong{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.whh-card{width:clamp(280px,22vw,360px);padding:20px 22px;border-radius:22px;background:rgba(6,42,39,.62);border:1px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(16px) saturate(1.2);backdrop-filter:blur(16px) saturate(1.2);box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.whh-who{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.22)}
+.whh-who img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.6)}
+.whh-who b{display:block;font-size:1.02em}.whh-who span span{font-size:.85em;opacity:.8}
+.whh-card dl{margin-top:10px;font-size:.9em}.whh-card dl div{display:flex;flex-wrap:wrap;justify-content:space-between;column-gap:1em;padding:.32em 0}
+.whh-card dt,.whh-card dd{white-space:nowrap}.whh-card dd{margin-left:auto}
+.whh-card dt{opacity:.75}.whh-card dd{font-weight:600}.whh-card dd.off{opacity:.6;font-weight:500}
+@keyframes whhrise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.whh-lead,.whh-act,.whh-card{animation:whhrise .9s cubic-bezier(.2,.7,.2,1) both}
+.whh-lead{animation-delay:.25s}.whh-act{animation-delay:.35s}.whh-card{animation-delay:.5s}
+@media(prefers-reduced-motion:reduce){.whh-lead,.whh-act,.whh-card{animation:none}}
+@media(max-width:900px){.whh{min-height:0;background:linear-gradient(150deg,#0a2f2b 0%,#0b5a51 50%,#0e7d72 100%)!important}.whh > picture img,.whh::before,.whh-card{display:none}.whh-in{grid-template-columns:1fr;padding-top:calc(var(--navh) + 36px)}}
+
+/* header: Services dropdown (option A, 2026-11-01). Clock now hides at 1310px (Malay 1440px) to make room. */
+nav .has-sub{position:relative;display:flex;align-items:center;gap:.2em}
+nav .sub-btn{background:none;border:0;color:inherit;padding:.25em;margin-right:-.25em;cursor:pointer;display:inline-flex;line-height:0;border-radius:6px}
+nav .sub-btn svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+html[lang] nav ul.sub{display:none;position:absolute;top:calc(100% + 16px);left:-14px;min-width:15.5em;background:#fff;color:var(--ink);border-radius:12px;box-shadow:0 22px 44px -18px rgba(0,0,0,.4),0 0 0 1px rgba(18,59,54,.06);padding:.45em;flex-direction:column;align-items:stretch;gap:0;font-size:.96em;z-index:40}
+nav ul.sub::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+html[lang] nav ul.sub a{display:block;padding:.62em .9em;border-radius:8px;color:var(--ink)}
+html[lang] nav ul.sub a:hover{background:var(--mint);color:var(--green-d)}
+@media(min-width:1091px){
+  html[lang] nav li.has-sub:hover > ul.sub,html[lang] nav li.has-sub.open > ul.sub{display:flex}
+  nav li.has-sub:hover .sub-btn svg,nav li.has-sub.open .sub-btn svg{transform:rotate(180deg)}
+}
+html[lang] nav.open ul.sub li.dup{display:none}
+@media(max-width:1090px){
+  nav .has-sub{flex-direction:column;align-items:flex-start;gap:.2em}
+  nav .sub-btn{display:none}
+  html[lang] nav.open ul.sub{display:flex;position:static;box-shadow:none;background:none;color:inherit;padding:.3em 0 0 1em;min-width:0;gap:.55em;font-size:.94em;border-radius:0;border-left:2px solid rgba(255,255,255,.25)}
+  html[lang] nav.open ul.sub a{color:#fff;padding:0;opacity:.88}
+}
+@media(max-width:1170px){
+  html[lang="ms"] nav .has-sub{flex-direction:column;align-items:flex-start}
+  html[lang="ms"] nav .sub-btn{display:none}
+  html[lang="ms"] nav.open ul.sub{display:flex;position:static;box-shadow:none;background:none;color:inherit;padding:.3em 0 0 1em;min-width:0;gap:.55em;font-size:.94em;border-radius:0;border-left:2px solid rgba(255,255,255,.25)}
+  html[lang="ms"] nav.open ul.sub a{color:#fff;padding:0;opacity:.88}
+}

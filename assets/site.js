@@ -140,3 +140,22 @@ document.addEventListener('click', function (e) {
   b.textContent = open ? (document.documentElement.lang === 'ms' ? 'Tunjuk lebih sedikit' : 'Show fewer tests') : b.getAttribute('data-label');
   b.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
+
+// Services dropdown (2026-11-01): hover opens it on desktop (CSS); the arrow button toggles it for touch and keyboard.
+(function () {
+  function closeAll() {
+    document.querySelectorAll('.has-sub.open').forEach(function (li) {
+      li.classList.remove('open');
+      var b = li.querySelector('.sub-btn'); if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  }
+  document.querySelectorAll('.sub-btn').forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = b.parentElement.classList.toggle('open');
+      b.setAttribute('aria-expanded', open);
+    });
+  });
+  document.addEventListener('click', closeAll);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+})();

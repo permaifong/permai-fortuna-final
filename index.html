@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=7">
+<link rel="stylesheet" href="/assets/site.css?v=8">
 <script>document.documentElement.classList.add('js')</script>
 <!-- GA4: loads only on the live domain, so local review visits are not counted -->
 <script>if(location.hostname.indexOf('permaipolyclinicsfortuna.com')>-1){var g=document.createElement('script');g.async=1;g.src='https://www.googletagmanager.com/gtag/js?id=G-2KTE79ZGXM';document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-2KTE79ZGXM');}</script>
@@ -72,6 +72,7 @@
  "image": [
   "https://permaipolyclinicsfortuna.com/pictures/permai-fortuna-clinic-team.jpg",
   "https://permaipolyclinicsfortuna.com/pictures/dr-nicholas-jeremiah.jpg",
+  "https://permaipolyclinicsfortuna.com/pictures/dr-valerianne-basintal.jpg",
   "https://permaipolyclinicsfortuna.com/pictures/og-1x1.jpg",
   "https://permaipolyclinicsfortuna.com/pictures/og-4x3.jpg",
   "https://permaipolyclinicsfortuna.com/pictures/og-16x9.jpg"
@@ -125,7 +126,7 @@
  "aggregateRating": {
   "@type": "AggregateRating",
   "ratingValue": "5.0",
-  "reviewCount": "251",
+  "reviewCount": "292",
   "bestRating": "5",
   "worstRating": "1"
  },
@@ -217,7 +218,19 @@
   },
   {
    "@type": "MedicalProcedure",
-   "name": "Antenatal care"
+   "name": "Antenatal screening"
+  },
+  {
+   "@type": "MedicalTest",
+   "name": "Pap smear"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Family planning"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Women's health consultation"
   },
   {
    "@type": "MedicalProcedure",
@@ -322,6 +335,22 @@
   },
   {
    "@type": "Question",
+   "name": "Do you do pap smears?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Pap smears are done in a private room, and you can ask for our female doctor, Dr. Valerianne. She is in Monday to Friday, 7am to 12 noon, and Saturday, 7am to 11pm. See women's health."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When is each doctor in?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Dr. Nicholas: Sunday to Friday, 12 noon to 7am. Dr. Valerianne: Monday to Friday, 7am to 12 noon, and Saturday, 7am to 11pm. The clinic is open 24 hours, every day."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Do you treat children?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -379,10 +408,9 @@
     <a class="brand" href="/" aria-label="Permai Polyclinics Fortuna, home"><img src="/assets/img/logo_glyph.png?v=2" alt="" width="88" height="82"><span class="bt"><b>Permai Polyclinics</b><span>Fortuna</span></span></a>
     <div class="nav-live" data-live-clock><span class="dot" aria-hidden="true"></span><span class="t">Open 24 hours</span></div>
     <ul>
-      <li><a href="/services/">Services</a></li>
-      <li><a href="/medical-check-up/">Medical check-up</a></li>
-      <li><a href="/vaccinations/">Vaccinations</a></li>
+      <li class="has-sub"><a href="/services/">Services</a><button class="sub-btn" type="button" aria-expanded="false" aria-label="Show services"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><ul class="sub"><li class="dup"><a href="/services/">All services</a></li><li><a href="/medical-check-up/">Medical check-up</a></li><li><a href="/vaccinations/">Vaccinations</a></li><li><a href="/womens-health/">Women's health</a></li></ul></li>
       <li><a href="/#team">Our team</a></li>
+      <li><a href="/blog/">Blog</a></li>
       <li><a href="/#visit">Visit us</a></li>
       <li class="lang" aria-label="Language"><span>EN</span><a href="/ms/" lang="ms" hreflang="ms">MY</a></li>
       <li><a class="pill" href="https://wa.me/60129393537?text=Hi%20Permai%20Fortuna%2C%20I%20have%20a%20question." target="_blank" rel="noopener">WhatsApp us</a></li>
@@ -420,7 +448,7 @@
     <div class="svc-cols">
       <div class="svc-col rv"><h3><svg viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>Doctor and urgent care</h3><ul><li>24-hour walk-in consultation</li><li>Colds, flu, fever and infections</li><li>Emergency treatment</li><li>House calls</li><li>Wound care and dressing</li></ul></div>
       <div class="svc-col rv"><h3><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3.5h6v2.5H9z"/><path d="M8.5 12.5l2.2 2.2 4.8-4.8"/></svg>Tests and check-ups</h3><ul><li><a href="/medical-check-up/">Health screening packages</a></li><li>Blood and urine tests</li><li>ECG and ultrasound</li><li><a href="/medical-check-up/#employers">Pre-employment screening</a></li><li>Haji and Umrah examination</li></ul></div>
-      <div class="svc-col rv"><h3><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 15.5c2.8 0 5 2 5 4.5"/></svg>Family and long-term care</h3><ul><li><a href="/vaccinations/">Vaccinations</a></li><li>Antenatal care and ultrasound</li><li>Diabetes, blood pressure and cholesterol</li><li>Knee and trigger point injections</li><li>Minor surgery</li></ul></div>
+      <div class="svc-col rv"><h3><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 15.5c2.8 0 5 2 5 4.5"/></svg>Family and long-term care</h3><ul><li><a href="/vaccinations/">Vaccinations</a></li><li><a href="/womens-health/">Pap smear and antenatal screening</a></li><li>Diabetes, blood pressure and cholesterol</li><li>Knee and trigger point injections</li><li>Minor surgery</li></ul></div>
     </div>
     <p class="center rv" style="margin-top:clamp(32px,3vw,56px)"><a class="pill outline" href="/services/">See all our services</a></p>
   </div>
@@ -433,18 +461,10 @@
       <h2>The team behind your care</h2>
       <p>A small clinic team you get to know by name. Whatever hour you walk in, there is always a doctor and a nurse on duty.</p>
     </div>
-    <div class="doc">
-      <div class="photo wipe"><img src="/assets/img/dr-nicholas.webp" alt="Dr. Nicholas Jeremiah, Permai Polyclinics Fortuna" loading="lazy"></div>
-      <div class="rv">
-        <h3 style="font-size:clamp(30px,2.6vw,56px)">Dr. Nicholas Jeremiah</h3>
-        <div class="role">Resident doctor</div>
-        <p>A graduate of Monash University with close to 13 years in medicine, Dr. Nicholas believes good care starts with making patients feel heard and at ease.</p><p>Patients know him for his calm manner and for never rushing a consultation. He explains what is happening, why, and what comes next, and goes through your treatment options with you.</p>
-        <dl><div><dt>Medical degree</dt><dd>Monash University</dd></div><div><dt>Experience</dt><dd>Close to 13 years</dd></div><div><dt>Consultations</dt><dd>Walk in any hour</dd></div></dl>
-      </div>
-    </div>
+    <div class="docs-a"><article class="dca rv"><div class="photo wipe"><img srcset="/assets/img/dr-nicholas-jeremiah-600.webp 600w, /assets/img/dr-nicholas-jeremiah-900.webp 900w" sizes="(max-width:900px) 92vw, 34vw" src="/assets/img/dr-nicholas-jeremiah-900.webp" alt="Dr. Nicholas Jeremiah, Permai Polyclinics Fortuna" width="900" height="1125" loading="lazy"></div><h3>Dr. Nicholas Jeremiah</h3><div class="role">Resident doctor</div><p>A graduate of Monash University with close to 13 years in medicine. Patients know him for his calm manner and for never rushing a consultation. He explains what is happening, why, and what comes next.</p><div class="hrs"><div class="hrs-h">In clinic</div><dl><div><dt>Mon to Fri</dt><dd>12 noon to 7am</dd></div><div><dt>Saturday</dt><dd class=off>Off</dd></div><div><dt>Sunday</dt><dd>12 noon to 7am</dd></div></dl></div><dl class="facts"><div><dt>Medical degree</dt><dd>Monash University</dd></div><div><dt>Experience</dt><dd>Close to 13 years</dd></div><div><dt>Languages</dt><dd>English, Bahasa Malaysia</dd></div></dl></article><article class="dca rv"><div class="photo wipe"><img srcset="/assets/img/dr-valerianne-basintal-600.webp 600w, /assets/img/dr-valerianne-basintal-900.webp 900w" sizes="(max-width:900px) 92vw, 34vw" src="/assets/img/dr-valerianne-basintal-900.webp" alt="Dr. Valerianne Basintal, Permai Polyclinics Fortuna" width="900" height="1125" loading="lazy"></div><h3>Dr. Valerianne Basintal</h3><div class="role">Resident doctor</div><p>Dr. Valerianne has worked in medicine since 2020, at Sarawak General Hospital and Hospital Tengku Permaisuri Norashikin. Women who would like a female doctor for a pap smear or another women's health concern can ask for her. <a class="arrow" href="/womens-health/">Women's health</a></p><div class="hrs"><div class="hrs-h">In clinic</div><dl><div><dt>Mon to Fri</dt><dd>7am to 12 noon</dd></div><div><dt>Saturday</dt><dd>7am to 11pm</dd></div><div><dt>Sunday</dt><dd class=off>Off</dd></div></dl></div><dl class="facts"><div><dt>Medical degree</dt><dd>Kursk State Medical University</dd></div><div><dt>Experience</dt><dd>In medicine since 2020</dd></div><div><dt>Languages</dt><dd>English, Bahasa Malaysia</dd></div></dl></article></div>
     <div class="crew">
       <div class="rv"><h3>Our nurses and clinic staff</h3><p>Two staff nurses, two medical assistants, an assistant pharmacist and a clinical assistant. They do your dressings, injections and blood tests, prepare your medicine at the pharmacy counter, and are on duty at 3am the same as at 3pm.</p></div>
-      <figure class="rv"><div class="photo wipe"><img srcset="/assets/img/team-c-800.webp 800w, /assets/img/team-c.webp 1320w" sizes="(max-width:900px) 92vw, 50vw" src="/assets/img/team-c.webp" alt="The doctor, nurses and clinic staff at Permai Polyclinics Fortuna" loading="lazy"></div><figcaption>From left: <b>Abygail</b>, <b>Izzati</b>, <b>Dr. Nicholas</b>, <b>Dennoel</b> and <b>Chuan Yee</b>.</figcaption></figure>
+      <figure class="rv"><div class="photo wipe"><img srcset="/assets/img/team-d-800.webp 800w, /assets/img/team-d.webp 1440w" sizes="(max-width:900px) 92vw, 50vw" src="/assets/img/team-d.webp" alt="The doctor, nurses and clinic staff at Permai Polyclinics Fortuna" loading="lazy"></div><figcaption>From left: <b>Abygail</b>, <b>Izzati</b>, <b>Dr. Nicholas</b>, <b>Dennoel</b> and <b>Chuan Yee</b>.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -461,7 +481,7 @@
     <div class="rhead rv">
       <div class="eyebrow">Patient reviews</div>
       <h2>Trusted by our community.</h2>
-      <div class="g-rating"><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span class="score">5.0</span><span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="count">251 Google reviews</span></div>
+      <div class="g-rating"><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span class="score">5.0</span><span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="count">292 Google reviews</span></div>
     </div>
     <div class="rev-grid">
       <figure class="rev rv"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>Dr Nicholas is the kind of doctor you wish you'd met earlier. Super approachable and friendly, and he doesn't make you feel like just another patient. He went out of his way to make sure I was okay before I left.</blockquote><figcaption><span class="avatar">B</span><span class="who"><strong>Bing f</strong><span><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>via Google</span></span></figcaption></figure>
@@ -500,6 +520,8 @@
 <details class="q rv"><summary>Do you have ECG and ultrasound?</summary><p>Yes. ECG heart checks and ultrasound scans are done at the clinic. The doctor will advise which tests suit you.</p></details>
 <details class="q rv"><summary>Do you treat knee pain and give knee injections?</summary><p>Yes. Our doctor assesses knee pain and offers intra-articular knee injections for suitable patients, including those with knee osteoarthritis. No referral needed.</p></details>
 <details class="q rv"><summary>Do you do antenatal check-ups?</summary><p>Yes. We do routine antenatal follow-ups and pregnancy monitoring when the doctor finds them suitable.</p></details>
+<details class="q rv"><summary>Do you do pap smears?</summary><p>Yes. Pap smears are done in a private room, and you can ask for our female doctor, Dr. Valerianne. She is in Monday to Friday, 7am to 12 noon, and Saturday, 7am to 11pm. See <a href="/womens-health/">women's health</a>.</p></details>
+<details class="q rv"><summary>When is each doctor in?</summary><p>Dr. Nicholas: Sunday to Friday, 12 noon to 7am. Dr. Valerianne: Monday to Friday, 7am to 12 noon, and Saturday, 7am to 11pm. The clinic is open 24 hours, every day.</p></details>
 <details class="q rv"><summary>Do you treat children?</summary><p>Yes. We see patients of all ages, from babies to grandparents, including childhood immunisations.</p></details>
 <details class="q rv"><summary>Do you provide emergency treatment?</summary><p>We treat urgent conditions around the clock. For life-threatening emergencies, please call 999 or go to the nearest hospital emergency department.</p></details>
 <details class="q rv"><summary>Where is the clinic?</summary><p>On the ground floor of Fortuna Commercial Centre, Mile 2.5, Jalan Penampang, Kota Kinabalu, with parking right outside.</p></details>
@@ -522,7 +544,7 @@
     <div class="foot-top">
       <a class="brand" href="/"><img src="/assets/img/logo_glyph.png?v=2" alt="" width="88" height="82"><span class="bt"><b>Permai Polyclinics</b><span>Fortuna</span></span></a>
       <div class="foot-links">
-        <a href="/services/">Services</a><a href="/medical-check-up/">Medical check-up</a><a href="/vaccinations/">Vaccinations</a><a href="/#team">Our team</a><a href="/#visit">Visit us</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a>
+        <a href="/services/">Services</a><a href="/medical-check-up/">Medical check-up</a><a href="/vaccinations/">Vaccinations</a><a href="/womens-health/">Women's health</a><a href="/#team">Our team</a><a href="/#visit">Visit us</a><a href="/#faq">FAQ</a><a href="/blog/">Blog</a>
       </div>
       <div class="social">
         <a href="https://www.instagram.com/permaipolyclinics.fortuna" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM21.5 12c0-1.3 0-2.6-.1-3.9-.1-1.5-.4-2.8-1.5-3.9S17.4 2.8 15.9 2.7C14.6 2.6 13.3 2.6 12 2.6s-2.6 0-3.9.1c-1.5.1-2.8.4-3.9 1.5S2.8 6.6 2.7 8.1C2.6 9.4 2.6 10.7 2.6 12s0 2.6.1 3.9c.1 1.5.4 2.8 1.5 3.9s2.4 1.4 3.9 1.5c1.3.1 2.6.1 3.9.1s2.6 0 3.9-.1c1.5-.1 2.8-.4 3.9-1.5s1.4-2.4 1.5-3.9c.1-1.3.1-2.6.1-3.9zm-2.2 5.6c-.3.8-.9 1.4-1.7 1.7-1.2.5-4 .4-5.6.4s-4.4.1-5.6-.4c-.8-.3-1.4-.9-1.7-1.7-.5-1.2-.4-4-.4-5.6s-.1-4.4.4-5.6c.3-.8.9-1.4 1.7-1.7 1.2-.5 4-.4 5.6-.4s4.4-.1 5.6.4c.8.3 1.4.9 1.7 1.7.5 1.2.4 4 .4 5.6s.1 4.4-.4 5.6z"/></svg></a>
@@ -539,6 +561,6 @@
 <a class="wa" href="https://wa.me/60129393537?text=Hi%20Permai%20Fortuna%2C%20I%20have%20a%20question." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><span class="wa-tag" aria-hidden="true"><span class="dot"></span>We're open</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7.2 3.9Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5L9.7 7.5c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7a9.6 9.6 0 0 0 3.7 3.3c.5.2.9.4 1.2.5.5.2 1 .1 1.4.1.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg></a>
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
-<script src="/assets/site.js?v=3" defer></script>
+<script src="/assets/site.js?v=4" defer></script>
 </body>
 </html>
