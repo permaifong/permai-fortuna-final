@@ -1,6 +1,12 @@
 User-agent: *
-Allow: /
 Disallow: /assets/img/dr-valerianne-basintal-
 Disallow: /pictures/dr-valerianne-basintal.jpg
+Disallow: /assets/img/avatar-
+Disallow: /assets/img/hero-
+Disallow: /assets/img/blog/
+
+User-agent: facebookexternalhit
+User-agent: Twitterbot
+Allow: /
 
 Sitemap: https://permaipolyclinicsfortuna.com/sitemap.xml
