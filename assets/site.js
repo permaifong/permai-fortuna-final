@@ -159,3 +159,25 @@ document.addEventListener('click', function (e) {
   document.addEventListener('click', closeAll);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
 })();
+
+/* Find us photo carousel: arrows and dots drive native scroll-snap, so swiping works on its own */
+(function () {
+  document.querySelectorAll('.pcar').forEach(function (c) {
+    var t = c.querySelector('.pcar-track'), prev = c.querySelector('.prev'), next = c.querySelector('.next');
+    var dots = c.querySelectorAll('.pcar-dots button'), last = t.children.length - 1;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function at() { return Math.round(t.scrollLeft / t.clientWidth); }
+    function go(i) { t.scrollTo({ left: i * t.clientWidth, behavior: calm ? 'auto' : 'smooth' }); }
+    function show() {
+      var i = at();
+      prev.hidden = i === 0;
+      next.hidden = i === last;
+      dots.forEach(function (d, k) { d.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+    }
+    prev.addEventListener('click', function () { go(at() - 1); });
+    next.addEventListener('click', function () { go(at() + 1); });
+    dots.forEach(function (d, k) { d.addEventListener('click', function () { go(k); }); });
+    t.addEventListener('scroll', show, { passive: true });
+    show();
+  });
+})();

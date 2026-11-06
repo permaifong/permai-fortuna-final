@@ -4,6 +4,7 @@ Disallow: /pictures/dr-valerianne-basintal.jpg
 Disallow: /assets/img/avatar-
 Disallow: /assets/img/hero-
 Disallow: /assets/img/blog/
+Disallow: /assets/img/clinic-inside
 
 User-agent: facebookexternalhit
 User-agent: Twitterbot
